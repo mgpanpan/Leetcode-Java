@@ -1,6 +1,10 @@
 * Leetcode Solutions in Java                                           :TOC_3:
   - [[#linked-list][Linked List]]
     - [[#linked-list-cycle][Linked List Cycle]]
+    - [[#reverse-linked-list][Reverse Linked List]]
+    - [[#remove-duplicates-from-sorted-list][Remove Duplicates from Sorted List]]
+    - [[#merge-two-sorted-lists][Merge Two Sorted Lists]]
+    - [[#palindrome-linked-list][Palindrome Linked List]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -16,5 +20,27 @@ public static boolean hasCycle(ListNode head)
 格，慢指针每次移动一格， 若两者能够相遇，则有环，否则，若在这个过程中
 检测到了链表尾，则无环。
 
+*** Reverse Linked List
+
+#+BEGIN_SRC Java
+public static ListNode reverseList(ListNode head)
+#+END_SRC
+
+三个指针，依次往后移动。
+
+*** Remove Duplicates from Sorted List
+
+- A Recursive solution:
+#+BEGIN_SRC Java
+public ListNode deleteDuplicates(ListNode head) {
+    if (head == null) return head;
+    head.next = deleteDuplicates(head.next);
+    return head.next != null && head.val == head.next.val ? head.next : head;
+}
+#+END_SRC
+
+*** Merge Two Sorted Lists
+
+*** Palindrome Linked List
 ** Array
 ** Tree
