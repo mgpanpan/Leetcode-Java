@@ -4,5 +4,16 @@
   - [[#tree][Tree]]
 
 ** Linked List
+*** Linked List Cycle
+Given a linked list, determine if it has a cycle in it.
+
+#+BEGIN_SRC Java
+public static boolean hasCycle(ListNode head)
+#+END_SRC
+
+快慢指针法，块指针从head.next开始，慢指针从head开始，快指针每次移动两
+格，慢指针每次移动一格， 若两者能够相遇，则有环，否则，若在这个过程中
+检测到了链表尾，则无环。
+
 ** Array
 ** Tree
