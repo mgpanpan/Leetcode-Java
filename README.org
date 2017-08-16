@@ -1,5 +1,6 @@
-* Leetcode Solutions in Java                                           :TOC:
+* Leetcode Solutions in Java                                           :TOC_3:
   - [[#linked-list][Linked List]]
+    - [[#linked-list-cycle][Linked List Cycle]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
