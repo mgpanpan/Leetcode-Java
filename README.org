@@ -6,6 +6,7 @@
     - [[#merge-two-sorted-lists][Merge Two Sorted Lists]]
     - [[#palindrome-linked-list][Palindrome Linked List]]
     - [[#remove-linked-list-elements][Remove Linked List Elements]]
+    - [[#intersection-of-two-linked-lists][Intersection of Two Linked Lists]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -96,6 +97,36 @@ Return: 1 --> 2 --> 3 --> 4 --> 5
 #+BEGIN_SRC Java
 public static ListNode removeElements(ListNode head, int val)
 #+END_SRC
+
+需要一个 ~dummy~ 节点，每次判断下一个节点的值。
+
+*** Intersection of Two Linked Lists
+#+BEGIN_QUOTE
+Write a program to find the node at which the intersection of two singly linked lists begins.
+
+For example, the following two linked lists:
+
+: A:          a1 → a2
+:                    ↘
+:                      c1 → c2 → c3
+:                    ↗            
+: B:     b1 → b2 → b3
+
+begin to intersect at node c1.
+
+
+Notes:
+1. If the two linked lists have no intersection at all, return null.
+2. The linked lists must retain their original structure after the function returns.
+3. You may assume there are no cycles anywhere in the entire linked structure.
+4. Your code should preferably run in O(n) time and use only O(1) memory.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode getIntersectionNode(ListNode headA, ListNode headB)
+#+END_SRC Java
+
+思路：只要相交，则从某一个点开始到链表尾都是完全相同的，则先确定两个链表的长度，然后让长的链表先扫描，短的链表后扫描，使得两者能够同时到达链表尾，然后依次判断相应节点是否相同。
 
 ** Array
 ** Tree
