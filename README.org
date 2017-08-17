@@ -9,6 +9,7 @@
     - [[#intersection-of-two-linked-lists][Intersection of Two Linked Lists]]
     - [[#delete-node-in-a-linked-list][Delete Node in a Linked List]]
     - [[#add-two-numbers][Add Two Numbers]]
+    - [[#add-two-numbers-ii][Add Two Numbers II]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -145,12 +146,13 @@ public void deleteNode(ListNode node)
 
 *** Add Two Numbers
 #+BEGIN_QUOTE
-You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+You are given two *non-empty* linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-Output: 7 -> 0 -> 8
+*Example:*
+: Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+: Output: 7 -> 0 -> 8
 #+END_QUOTE
 
 #+BEGIN_SRC Java
@@ -159,5 +161,24 @@ public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
 
 本题数字是逆序存放的，因此便于依次从低位加到高位，需记录进位。
 
+*** Add Two Numbers II
+#+BEGIN_QUOTE
+You are given two *non-empty* linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+*Follow up:*
+What if you cannot modify the input lists? In other words, reversing the lists is not allowed.
+
+*Example:*
+: Input: (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
+: Output: 7 -> 8 -> 0 -> 7
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
+#+END_SRC
+
+使用栈。
 ** Array
 ** Tree
