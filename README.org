@@ -7,6 +7,8 @@
     - [[#palindrome-linked-list][Palindrome Linked List]]
     - [[#remove-linked-list-elements][Remove Linked List Elements]]
     - [[#intersection-of-two-linked-lists][Intersection of Two Linked Lists]]
+    - [[#delete-node-in-a-linked-list][Delete Node in a Linked List]]
+    - [[#add-two-numbers][Add Two Numbers]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -127,6 +129,35 @@ public static ListNode getIntersectionNode(ListNode headA, ListNode headB)
 #+END_SRC Java
 
 思路：只要相交，则从某一个点开始到链表尾都是完全相同的，则先确定两个链表的长度，然后让长的链表先扫描，短的链表后扫描，使得两者能够同时到达链表尾，然后依次判断相应节点是否相同。
+
+*** Delete Node in a Linked List
+#+BEGIN_QUOTE
+Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.
+
+Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node with value 3, the linked list should become 1 -> 2 -> 4 after calling your function.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public void deleteNode(ListNode node) 
+#+END_SRC
+
+本题在讨论区争议很大，因为只给出本节点的情况下是无法删除本节点的，只能通过 ~change value~ 来达到删除的作用。
+
+*** Add Two Numbers
+#+BEGIN_QUOTE
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
+#+END_SRC
+
+本题数字是逆序存放的，因此便于依次从低位加到高位，需记录进位。
 
 ** Array
 ** Tree
