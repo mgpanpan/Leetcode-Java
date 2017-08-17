@@ -30,13 +30,22 @@ public class IntersectionTwoLinkedLists {
         else
             for (int i = 0; i < lA - lB; i++)
                 pA = pA.next;
+
+        /*
         while (pA != null && pB != null) {
             if (pA == pB)
                 return pA;
             pA = pA.next;
             pB = pB.next;
         }
-        return null;
+        return null; */
+
+        // 简化
+        while (pA != pB) {
+            pA = pA.next;
+            pB = pB.next;
+        }
+        return pA;
     }
 
     private static int lengthLinkedList(ListNode head) {
