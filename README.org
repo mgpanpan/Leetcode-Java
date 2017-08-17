@@ -10,7 +10,9 @@
 
 ** Linked List
 *** Linked List Cycle
+#+BEGIN_QUOTE
 Given a linked list, determine if it has a cycle in it.
+#+END_QUOTE
 
 #+BEGIN_SRC Java
 public static boolean hasCycle(ListNode head)
@@ -21,6 +23,13 @@ public static boolean hasCycle(ListNode head)
 检测到了链表尾，则无环。
 
 *** Reverse Linked List
+#+BEGIN_QUOTE
+Reverse a linked list.
+
+Challenge:
+1. Reverse it in-place and in one-pass
+2. A linked list can be reversed either iteratively or recursively. Could you implement both?
+#+END_QUOTE
 
 #+BEGIN_SRC Java
 public static ListNode reverseList(ListNode head)
@@ -42,5 +51,19 @@ public ListNode deleteDuplicates(ListNode head) {
 *** Merge Two Sorted Lists
 
 *** Palindrome Linked List
+#+BEGIN_QUOTE
+Given a singly linked list, determine if it is a palindrome.
+
+Follow up:
+Could you do it in O(n) time and O(1) space?
+#+END_QUOTE
+
+后半部分逆序，和前半部分依次比较，比较完成后将后半部分恢复，并和前半部
+分连接，以恢复原链表。
+
+关于 ~O(1)~ 空间复杂度要求的讨论：
+
+[[https://discuss.leetcode.com/topic/18533/reversing-a-list-is-not-considered-o-1-space/2][Reversing a list is not considered "O(1) space" | LeetCode Discuss]]
+
 ** Array
 ** Tree

@@ -4,7 +4,8 @@ import java.util.Random;
  * Created by panmengguan on 2017/8/16.
  * Basic functions for the processing of linked list.
  * Including:
- *
+ *     array2list
+ *     show
  */
 
 public class LinkedListBasic {

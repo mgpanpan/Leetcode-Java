@@ -1,5 +1,13 @@
-// [] 为 true
+/**
+ * Created by panmengguan on 2017/8/16.
+ *
+ * Given a singly linked list, determine if it is a palindrome.
+ * Follow up:
+ * Could you do it in O(n) time and O(1) space?
+ *
+ * */
 
+// Empty list should return true
 public class PalindromeLinkedList {
     public static boolean isPalindrome(ListNode head) {
         if (head == null) return true;

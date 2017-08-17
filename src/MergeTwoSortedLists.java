@@ -1,3 +1,8 @@
+/**
+ * Created by panmengguan on 2017/8/16.
+ *
+ *
+ * */
 public class MergeTwoSortedLists {
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1);
