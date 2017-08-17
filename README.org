@@ -5,6 +5,7 @@
     - [[#remove-duplicates-from-sorted-list][Remove Duplicates from Sorted List]]
     - [[#merge-two-sorted-lists][Merge Two Sorted Lists]]
     - [[#palindrome-linked-list][Palindrome Linked List]]
+    - [[#remove-linked-list-elements][Remove Linked List Elements]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -18,9 +19,7 @@ Given a linked list, determine if it has a cycle in it.
 public static boolean hasCycle(ListNode head)
 #+END_SRC
 
-快慢指针法，块指针从head.next开始，慢指针从head开始，快指针每次移动两
-格，慢指针每次移动一格， 若两者能够相遇，则有环，否则，若在这个过程中
-检测到了链表尾，则无环。
+快慢指针法，块指针从head.next开始，慢指针从head开始，快指针每次移动两格，慢指针每次移动一格， 若两者能够相遇，则有环，否则，若在这个过程中检测到了链表尾，则无环。
 
 *** Reverse Linked List
 #+BEGIN_QUOTE
@@ -60,9 +59,9 @@ public ListNode deleteDuplicates(ListNode head) {
 #+END_SRC
 
 *** Merge Two Sorted Lists
-#+BEGIN_SRC
+#+BEGIN_QUOTE
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-#+END_SRC
+#+END_QUOTE
 
 #+BEGIN_SRC Java
 public static ListNode mergeTwoLists(ListNode l1, ListNode l2)
@@ -79,12 +78,24 @@ Could you do it in O(n) time and O(1) space?
 #+BEGIN_SRC Java
 public static boolean isPalindrome(ListNode head)
 #+END_SRC
-后半部分逆序，和前半部分依次比较，比较完成后将后半部分恢复，并和前半部
-分连接，以恢复原链表。
+后半部分逆序，和前半部分依次比较，比较完成后将后半部分恢复，并和前半部分连接，以恢复原链表。
 
 关于 ~O(1)~ 空间复杂度要求的讨论：
 
 [[https://discuss.leetcode.com/topic/18533/reversing-a-list-is-not-considered-o-1-space/2][Reversing a list is not considered "O(1) space" | LeetCode Discuss]]
+
+*** Remove Linked List Elements
+#+BEGIN_QUOTE
+Remove all elements from a linked list of integers that have value val.
+
+Example:
+Given: 1 --> 2 --> 6 --> 3 --> 4 --> 5 --> 6, val = 6
+Return: 1 --> 2 --> 3 --> 4 --> 5
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode removeElements(ListNode head, int val)
+#+END_SRC
 
 ** Array
 ** Tree
