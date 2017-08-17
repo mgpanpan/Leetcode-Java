@@ -38,6 +38,17 @@ public static ListNode reverseList(ListNode head)
 三个指针，依次往后移动。
 
 *** Remove Duplicates from Sorted List
+#+BEGIN_QUOTE
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+For example,
+Given 1->1->2, return 1->2.
+Given 1->1->2->3->3, return 1->2->3.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode deleteDuplicates(ListNode head)
+#+END_SRC
 
 - A Recursive solution:
 #+BEGIN_SRC Java
@@ -49,6 +60,13 @@ public ListNode deleteDuplicates(ListNode head) {
 #+END_SRC
 
 *** Merge Two Sorted Lists
+#+BEGIN_SRC
+Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+#+END_SRC
+
+#+BEGIN_SRC Java
+public static ListNode mergeTwoLists(ListNode l1, ListNode l2)
+#+END_SRC
 
 *** Palindrome Linked List
 #+BEGIN_QUOTE
@@ -58,6 +76,9 @@ Follow up:
 Could you do it in O(n) time and O(1) space?
 #+END_QUOTE
 
+#+BEGIN_SRC Java
+public static boolean isPalindrome(ListNode head)
+#+END_SRC
 后半部分逆序，和前半部分依次比较，比较完成后将后半部分恢复，并和前半部
 分连接，以恢复原链表。
 
