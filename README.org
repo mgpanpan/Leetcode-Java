@@ -10,6 +10,8 @@
     - [[#delete-node-in-a-linked-list][Delete Node in a Linked List]]
     - [[#add-two-numbers][Add Two Numbers]]
     - [[#add-two-numbers-ii][Add Two Numbers II]]
+    - [[#odd-even-linked-list][Odd Even Linked List]]
+    - [[#swap-nodes-in-pairs][Swap Nodes in Pairs]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -179,6 +181,42 @@ What if you cannot modify the input lists? In other words, reversing the lists i
 public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
 #+END_SRC
 
-使用栈。
+使用栈。第一次提交用了三个栈，每个加数和结果均对应一个，第二次提交仅用了两个栈，将结果的栈取消，构建链表的时候完成逆序。
+
+*** Odd Even Linked List
+#+BEGIN_QUOTE
+Given a singly linked list, group all odd nodes together followed by the even nodes. Please note here we are talking about the node number and not the value in the nodes.
+
+You should try to do it in place. The program should run in O(1) space complexity and O(nodes) time complexity.
+
+Example:
+: Given 1->2->3->4->5->NULL,
+: return 1->3->5->2->4->NULL.
+
+Note:
+1. The relative order inside both the even and odd groups should remain as it was in the input. 
+2. The first node is considered odd, the second node even and so on ...
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode oddEvenList(ListNode head)
+#+END_SRC
+
+注意边界条件。
+
+*** Swap Nodes in Pairs
+#+BEGIN_QUOTE
+Given a linked list, swap every two adjacent nodes and return its head.
+
+For example,
+Given 1->2->3->4, you should return the list as 2->1->4->3.
+
+Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public ListNode swapPairs(ListNode head)
+#+END_SRC 
+
 ** Array
 ** Tree
