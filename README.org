@@ -12,6 +12,7 @@
     - [[#add-two-numbers-ii][Add Two Numbers II]]
     - [[#odd-even-linked-list][Odd Even Linked List]]
     - [[#swap-nodes-in-pairs][Swap Nodes in Pairs]]
+    - [[#convert-sorted-linked-list-to-binary-search-tree][Convert Sorted Linked List to Binary Search Tree]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -217,6 +218,24 @@ Your algorithm should use only constant space. You may not modify the values in 
 #+BEGIN_SRC Java
 public ListNode swapPairs(ListNode head)
 #+END_SRC 
+
+需加上一个前驱节点。
+
+*** Convert Sorted Linked List to Binary Search Tree
+#+BEGIN_QUOTE
+Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public TreeNode sortedListToBST(ListNode head)
+#+END_SRC
+
+- 解决思路一：自顶而下 Recursive
+找到中间节点，作为根节点，用左右链表分别构建左右子树，构建完成后分别连在根节点上。长度为 \(n\） 的链表找中间节点的时间复杂度为 \(O(n)\)，则总的时间复杂度为 
+\begin{equation}
+O(n) + O(n/2) * 2 + O(n/4) * 4 + ... = nlg(n)
+\end{equation}
+
 
 ** Array
 ** Tree
