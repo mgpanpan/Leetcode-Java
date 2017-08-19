@@ -28,7 +28,7 @@ Given a linked list, determine if it has a cycle in it.
 public static boolean hasCycle(ListNode head)
 #+END_SRC
 
-¿ìÂıÖ¸Õë·¨£¬¿éÖ¸Õë´Óhead.next¿ªÊ¼£¬ÂıÖ¸Õë´Óhead¿ªÊ¼£¬¿ìÖ¸ÕëÃ¿´ÎÒÆ¶¯Á½¸ñ£¬ÂıÖ¸ÕëÃ¿´ÎÒÆ¶¯Ò»¸ñ£¬ ÈôÁ½ÕßÄÜ¹»ÏàÓö£¬ÔòÓĞ»·£¬·ñÔò£¬ÈôÔÚÕâ¸ö¹ı³ÌÖĞ¼ì²âµ½ÁËÁ´±íÎ²£¬ÔòÎŞ»·¡£
+å¿«æ…¢æŒ‡é’ˆæ³•ï¼Œå—æŒ‡é’ˆä»head.nextå¼€å§‹ï¼Œæ…¢æŒ‡é’ˆä»headå¼€å§‹ï¼Œå¿«æŒ‡é’ˆæ¯æ¬¡ç§»åŠ¨ä¸¤æ ¼ï¼Œæ…¢æŒ‡é’ˆæ¯æ¬¡ç§»åŠ¨ä¸€æ ¼ï¼Œ è‹¥ä¸¤è€…èƒ½å¤Ÿç›¸é‡ï¼Œåˆ™æœ‰ç¯ï¼Œå¦åˆ™ï¼Œè‹¥åœ¨è¿™ä¸ªè¿‡ç¨‹ä¸­æ£€æµ‹åˆ°äº†é“¾è¡¨å°¾ï¼Œåˆ™æ— ç¯ã€‚
 
 *** Reverse Linked List
 #+BEGIN_QUOTE
@@ -43,7 +43,7 @@ Challenge:
 public static ListNode reverseList(ListNode head)
 #+END_SRC
 
-Èı¸öÖ¸Õë£¬ÒÀ´ÎÍùºóÒÆ¶¯¡£
+ä¸‰ä¸ªæŒ‡é’ˆï¼Œä¾æ¬¡å¾€åç§»åŠ¨ã€‚
 
 *** Remove Duplicates from Sorted List
 #+BEGIN_QUOTE
@@ -87,9 +87,9 @@ Could you do it in O(n) time and O(1) space?
 #+BEGIN_SRC Java
 public static boolean isPalindrome(ListNode head)
 #+END_SRC
-ºó°ë²¿·ÖÄæĞò£¬ºÍÇ°°ë²¿·ÖÒÀ´Î±È½Ï£¬±È½ÏÍê³Éºó½«ºó°ë²¿·Ö»Ö¸´£¬²¢ºÍÇ°°ë²¿·ÖÁ¬½Ó£¬ÒÔ»Ö¸´Ô­Á´±í¡£
+ååŠéƒ¨åˆ†é€†åºï¼Œå’Œå‰åŠéƒ¨åˆ†ä¾æ¬¡æ¯”è¾ƒï¼Œæ¯”è¾ƒå®Œæˆåå°†ååŠéƒ¨åˆ†æ¢å¤ï¼Œå¹¶å’Œå‰åŠéƒ¨åˆ†è¿æ¥ï¼Œä»¥æ¢å¤åŸé“¾è¡¨ã€‚
 
-¹ØÓÚ ~O(1)~ ¿Õ¼ä¸´ÔÓ¶ÈÒªÇóµÄÌÖÂÛ£º
+å…³äº ~O(1)~ ç©ºé—´å¤æ‚åº¦è¦æ±‚çš„è®¨è®ºï¼š
 
 [[https://discuss.leetcode.com/topic/18533/reversing-a-list-is-not-considered-o-1-space/2][Reversing a list is not considered "O(1) space" | LeetCode Discuss]]
 
@@ -106,7 +106,7 @@ Return: 1 --> 2 --> 3 --> 4 --> 5
 public static ListNode removeElements(ListNode head, int val)
 #+END_SRC
 
-ĞèÒªÒ»¸ö ~dummy~ ½Úµã£¬Ã¿´ÎÅĞ¶ÏÏÂÒ»¸ö½ÚµãµÄÖµ¡£
+éœ€è¦ä¸€ä¸ª ~dummy~ èŠ‚ç‚¹ï¼Œæ¯æ¬¡åˆ¤æ–­ä¸‹ä¸€ä¸ªèŠ‚ç‚¹çš„å€¼ã€‚
 
 *** Intersection of Two Linked Lists
 #+BEGIN_QUOTE
@@ -114,11 +114,11 @@ Write a program to find the node at which the intersection of two singly linked 
 
 For example, the following two linked lists:
 
-: A:          a1 ¡ú a2
-:                    ¨K
-:                      c1 ¡ú c2 ¡ú c3
-:                    ¨J            
-: B:     b1 ¡ú b2 ¡ú b3
+: A:          a1 â†’ a2
+:                    â†˜
+:                      c1 â†’ c2 â†’ c3
+:                    â†—            
+: B:     b1 â†’ b2 â†’ b3
 
 begin to intersect at node c1.
 
@@ -134,7 +134,7 @@ Notes:
 public static ListNode getIntersectionNode(ListNode headA, ListNode headB)
 #+END_SRC Java
 
-Ë¼Â·£ºÖ»ÒªÏà½»£¬Ôò´ÓÄ³Ò»¸öµã¿ªÊ¼µ½Á´±íÎ²¶¼ÊÇÍêÈ«ÏàÍ¬µÄ£¬ÔòÏÈÈ·¶¨Á½¸öÁ´±íµÄ³¤¶È£¬È»ºóÈÃ³¤µÄÁ´±íÏÈÉ¨Ãè£¬¶ÌµÄÁ´±íºóÉ¨Ãè£¬Ê¹µÃÁ½ÕßÄÜ¹»Í¬Ê±µ½´ïÁ´±íÎ²£¬È»ºóÒÀ´ÎÅĞ¶ÏÏàÓ¦½ÚµãÊÇ·ñÏàÍ¬¡£
+æ€è·¯ï¼šåªè¦ç›¸äº¤ï¼Œåˆ™ä»æŸä¸€ä¸ªç‚¹å¼€å§‹åˆ°é“¾è¡¨å°¾éƒ½æ˜¯å®Œå…¨ç›¸åŒçš„ï¼Œåˆ™å…ˆç¡®å®šä¸¤ä¸ªé“¾è¡¨çš„é•¿åº¦ï¼Œç„¶åè®©é•¿çš„é“¾è¡¨å…ˆæ‰«æï¼ŒçŸ­çš„é“¾è¡¨åæ‰«æï¼Œä½¿å¾—ä¸¤è€…èƒ½å¤ŸåŒæ—¶åˆ°è¾¾é“¾è¡¨å°¾ï¼Œç„¶åä¾æ¬¡åˆ¤æ–­ç›¸åº”èŠ‚ç‚¹æ˜¯å¦ç›¸åŒã€‚
 
 *** Delete Node in a Linked List
 #+BEGIN_QUOTE
@@ -147,7 +147,7 @@ Supposed the linked list is 1 -> 2 -> 3 -> 4 and you are given the third node wi
 public void deleteNode(ListNode node) 
 #+END_SRC
 
-±¾ÌâÔÚÌÖÂÛÇøÕùÒéºÜ´ó£¬ÒòÎªÖ»¸ø³ö±¾½ÚµãµÄÇé¿öÏÂÊÇÎŞ·¨É¾³ı±¾½ÚµãµÄ£¬Ö»ÄÜÍ¨¹ı ~change value~ À´´ïµ½É¾³ıµÄ×÷ÓÃ¡£
+æœ¬é¢˜åœ¨è®¨è®ºåŒºäº‰è®®å¾ˆå¤§ï¼Œå› ä¸ºåªç»™å‡ºæœ¬èŠ‚ç‚¹çš„æƒ…å†µä¸‹æ˜¯æ— æ³•åˆ é™¤æœ¬èŠ‚ç‚¹çš„ï¼Œåªèƒ½é€šè¿‡ ~change value~ æ¥è¾¾åˆ°åˆ é™¤çš„ä½œç”¨ã€‚
 
 *** Add Two Numbers
 #+BEGIN_QUOTE
@@ -164,7 +164,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
 #+END_SRC
 
-±¾ÌâÊı×ÖÊÇÄæĞò´æ·ÅµÄ£¬Òò´Ë±ãÓÚÒÀ´Î´ÓµÍÎ»¼Óµ½¸ßÎ»£¬Ğè¼ÇÂ¼½øÎ»¡£
+æœ¬é¢˜æ•°å­—æ˜¯é€†åºå­˜æ”¾çš„ï¼Œå› æ­¤ä¾¿äºä¾æ¬¡ä»ä½ä½åŠ åˆ°é«˜ä½ï¼Œéœ€è®°å½•è¿›ä½ã€‚
 
 *** Add Two Numbers II
 #+BEGIN_QUOTE
@@ -184,7 +184,7 @@ What if you cannot modify the input lists? In other words, reversing the lists i
 public static ListNode addTwoNumbers(ListNode l1, ListNode l2)
 #+END_SRC
 
-Ê¹ÓÃÕ»¡£µÚÒ»´ÎÌá½»ÓÃÁËÈı¸öÕ»£¬Ã¿¸ö¼ÓÊıºÍ½á¹û¾ù¶ÔÓ¦Ò»¸ö£¬µÚ¶ş´ÎÌá½»½öÓÃÁËÁ½¸öÕ»£¬½«½á¹ûµÄÕ»È¡Ïû£¬¹¹½¨Á´±íµÄÊ±ºòÍê³ÉÄæĞò¡£
+ä½¿ç”¨æ ˆã€‚ç¬¬ä¸€æ¬¡æäº¤ç”¨äº†ä¸‰ä¸ªæ ˆï¼Œæ¯ä¸ªåŠ æ•°å’Œç»“æœå‡å¯¹åº”ä¸€ä¸ªï¼Œç¬¬äºŒæ¬¡æäº¤ä»…ç”¨äº†ä¸¤ä¸ªæ ˆï¼Œå°†ç»“æœçš„æ ˆå–æ¶ˆï¼Œæ„å»ºé“¾è¡¨çš„æ—¶å€™å®Œæˆé€†åºã€‚
 
 *** Odd Even Linked List
 #+BEGIN_QUOTE
@@ -205,7 +205,7 @@ Note:
 public static ListNode oddEvenList(ListNode head)
 #+END_SRC
 
-×¢Òâ±ß½çÌõ¼ş¡£
+æ³¨æ„è¾¹ç•Œæ¡ä»¶ã€‚
 
 *** Swap Nodes in Pairs
 #+BEGIN_QUOTE
@@ -221,7 +221,7 @@ Your algorithm should use only constant space. You may not modify the values in 
 public ListNode swapPairs(ListNode head)
 #+END_SRC 
 
-Ğè¼ÓÉÏÒ»¸öÇ°Çı½Úµã¡£
+éœ€åŠ ä¸Šä¸€ä¸ªå‰é©±èŠ‚ç‚¹ã€‚
 
 *** Convert Sorted Linked List to Binary Search Tree
 #+BEGIN_QUOTE
@@ -232,12 +232,12 @@ Given a singly linked list where elements are sorted in ascending order, convert
 public TreeNode sortedListToBST(ListNode head)
 #+END_SRC
 
-- ½â¾öË¼Â·Ò»£º×Ô¶¥¶øÏÂ Recursive
-ÕÒµ½ÖĞ¼ä½Úµã£¬×÷Îª¸ù½Úµã£¬ÓÃ×óÓÒÁ´±í·Ö±ğ¹¹½¨×óÓÒ×ÓÊ÷£¬¹¹½¨Íê³Éºó·Ö±ğÁ¬ÔÚ¸ù½ÚµãÉÏ¡£³¤¶ÈÎª ~n~ µÄÁ´±íÕÒÖĞ¼ä½ÚµãµÄÊ±¼ä¸´ÔÓ¶ÈÎª ~O(n)~£¬Ôò×ÜµÄÊ±¼ä¸´ÔÓ¶ÈÎª 
+- è§£å†³æ€è·¯ä¸€ï¼šè‡ªé¡¶è€Œä¸‹ Recursive
+æ‰¾åˆ°ä¸­é—´èŠ‚ç‚¹ï¼Œä½œä¸ºæ ¹èŠ‚ç‚¹ï¼Œç”¨å·¦å³é“¾è¡¨åˆ†åˆ«æ„å»ºå·¦å³å­æ ‘ï¼Œæ„å»ºå®Œæˆååˆ†åˆ«è¿åœ¨æ ¹èŠ‚ç‚¹ä¸Šã€‚é•¿åº¦ä¸º ~n~ çš„é“¾è¡¨æ‰¾ä¸­é—´èŠ‚ç‚¹çš„æ—¶é—´å¤æ‚åº¦ä¸º ~O(n)~ï¼Œåˆ™æ€»çš„æ—¶é—´å¤æ‚åº¦ä¸º 
 : O(n) + O(n/2) * 2 + O(n/4) * 4 + ... = O(nlog(n))
 
-- ½â¾öË¼Â·¶ş£º×Ôµ×¶øÉÏ
-¸´ÔÓ¶È ~O(n)~ ¡£
+- è§£å†³æ€è·¯äºŒï¼šè‡ªåº•è€Œä¸Š
+å¤æ‚åº¦ ~O(n)~ ã€‚
 
 *** Remove Nth Node From End of List
 #+BEGIN_QUOTE
@@ -256,7 +256,7 @@ Given a linked list, remove the nth node from the end of list and return its hea
 public static ListNode removeNthFromEnd(ListNode head, int n)
 #+END_SRC
 
-¿ìÂıÖ¸Õë·¨£¬ =fast= Ö¸Õë±È =slow= Ö¸ÕëÏÈ×ß =n= ²½£¬µ± =fast= Ö¸ÕëÖ¸ÏòÁ´±íÎ²Ê±£¬ÂıÖ¸ÕëµÄÎ»ÖÃ¼´ÎªËùÒªÉ¾³ıµÄÎ»ÖÃ£¬Ğè¼ÓÉÏÒ»¸ö ~dummy~ ½Úµã£¬ÒòÎªµ±É¾³ıÔªËØÊ±£¬×ÜÊÇÒª»ñµÃÆäÇ°ÇıµÄ =reference= ¡£
+å¿«æ…¢æŒ‡é’ˆæ³•ï¼Œ =fast= æŒ‡é’ˆæ¯” =slow= æŒ‡é’ˆå…ˆèµ° =n= æ­¥ï¼Œå½“ =fast= æŒ‡é’ˆæŒ‡å‘é“¾è¡¨å°¾æ—¶ï¼Œæ…¢æŒ‡é’ˆçš„ä½ç½®å³ä¸ºæ‰€è¦åˆ é™¤çš„ä½ç½®ï¼Œéœ€åŠ ä¸Šä¸€ä¸ª ~dummy~ èŠ‚ç‚¹ï¼Œå› ä¸ºå½“åˆ é™¤å…ƒç´ æ—¶ï¼Œæ€»æ˜¯è¦è·å¾—å…¶å‰é©±çš„ =reference= ã€‚
 
 *** Insertion Sort Linked List
 #+BEGIN_QUOTE 
