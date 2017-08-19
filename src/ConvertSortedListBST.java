@@ -36,7 +36,7 @@ public class ConvertSortedListBST {
 
 
     /**
-     * 思路二 复杂度
+     * 思路二 复杂度 O(n)
      * */
     private static ListNode current;
     public static TreeNode sortedListToBST(ListNode head) {

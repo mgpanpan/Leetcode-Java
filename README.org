@@ -13,6 +13,8 @@
     - [[#odd-even-linked-list][Odd Even Linked List]]
     - [[#swap-nodes-in-pairs][Swap Nodes in Pairs]]
     - [[#convert-sorted-linked-list-to-binary-search-tree][Convert Sorted Linked List to Binary Search Tree]]
+    - [[#remove-nth-node-from-end-of-list][Remove Nth Node From End of List]]
+    - [[#insertion-sort-linked-list][Insertion Sort Linked List]]
   - [[#array][Array]]
   - [[#tree][Tree]]
 
@@ -235,6 +237,35 @@ public TreeNode sortedListToBST(ListNode head)
 : O(n) + O(n/2) * 2 + O(n/4) * 4 + ... = O(nlog(n))
 
 - 解决思路二：自底而上
+复杂度 ~O(n)~ 。
+
+*** Remove Nth Node From End of List
+#+BEGIN_QUOTE
+Given a linked list, remove the nth node from the end of list and return its head.
+
+*Example:*
+: Given linked list: 1->2->3->4->5, and n = 2.
+: After removing the second node from the end, the linked list becomes 1->2->3->5.
+
+*Note:*
+1. Given n will always be valid.
+2. Try to do this in one pass.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode removeNthFromEnd(ListNode head, int n)
+#+END_SRC
+
+快慢指针法， =fast= 指针比 =slow= 指针先走 =n= 步，当 =fast= 指针指向链表尾时，慢指针的位置即为所要删除的位置，需加上一个 ~dummy~ 节点，因为当删除元素时，总是要获得其前驱的 =reference= 。
+
+*** Insertion Sort Linked List
+#+BEGIN_QUOTE 
+Sort a linked list using insertion sort.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static ListNode insertionSortList(ListNode head)
+#+END_SRC
 
 ** Array
 ** Tree
