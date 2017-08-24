@@ -347,4 +347,7 @@ public int climbStairs(int n)
 
 实际上是 =Fibonacci= 序列。
 
+Leetcode 的解析中有 =log(n)= 时间复杂度的解法：
+: https://leetcode.com/problems/climbing-stairs/solution/
+
 
