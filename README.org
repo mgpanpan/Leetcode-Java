@@ -20,6 +20,9 @@
     - [[#maximum-subarray][Maximum Subarray]]
     - [[#maximum-profit][Maximum Profit]]
     - [[#climbing-stairs][Climbing Stairs]]
+    - [[#house-robber][House Robber]]
+    - [[#range-sum-query---immutable][Range Sum Query - Immutable]]
+    - [[#counting-bits][Counting Bits]]
 
 ** Linked List
 *** Linked List Cycle
@@ -350,4 +353,66 @@ public int climbStairs(int n)
 Leetcode 的解析中有 =log(n)= 时间复杂度的解法：
 : https://leetcode.com/problems/climbing-stairs/solution/
 
+*** House Robber
+#+BEGIN_QUOTE
+You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+
+Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public static int rob(int[] nums)
+#+END_SRC
+
+递推关系式：
+: f(0) = nums[0]
+: f(1) = max(nums[0], nums[1])
+: f(k) = max(f(k-2) + nums[k], f(k-1))
+
+*** Range Sum Query - Immutable
+#+BEGIN_QUOTE
+Given an integer array nums, find the sum of the elements between indices i and j (i <= j), inclusive.
+
+*Example:*
+: Given nums = [-2, 0, 3, -5, 2, -1]
+
+: sumRange(0, 2) -> 1
+: sumRange(2, 5) -> -1
+: sumRange(0, 5) -> -3
+
+*Note:*
+1. You may assume that the array does not change.
+2. There are many calls to sumRange function.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+class NumArray {
+    public NumArray(int[] nums) {
+    }
+
+    public int sumRange(int i, int j) {
+    }
+}
+
+/**
+ * Your NumArray object will be instantiated and called as such:
+ * NumArray obj = new NumArray(nums);
+ * int param_1 = obj.sumRange(i,j);
+ */
+#+END_SRC
+
+由于题目中提到了，会很多次调用 ~sumRange~ 函数，因此可在初始化时将累加结果算出，从而在调用 ~sumRange~ 时时间复杂度为 ~O(n)~ 。
+
+*** Counting Bits
+#+BEGIN_QUOTE
+Given a non negative integer number num. For every numbers i in the range ~0 <= i <= num~ calculate the number of 1's in their binary representation and return them as an array.
+
+*Example:*
+For num = 5 you should return [0,1,1,2,1,2].
+
+*Follow up:*
+1. It is very easy to come up with a solution with run time O(n*sizeof(integer)). But can you do it in linear time O(n) /possibly in a single pass?
+2. Space complexity should be O(n).
+3. Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.
+#+END_QUOTE
 
