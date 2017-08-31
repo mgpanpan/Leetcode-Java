@@ -27,6 +27,7 @@
     - [[#judge-route-circle][Judge Route Circle]]
   - [[#bit-manipulation][Bit Manipulation]]
     - [[#number-of-1-bits][Number of 1 Bits]]
+    - [[#sum-of-two-integers][Sum of Two Integers]]
   - [[#tree][Tree]]
     - [[#construct-string-from-binary-tree][Construct String from Binary Tree]]
     - [[#merge-two-binary-trees][Merge Two Binary Trees]]
@@ -469,9 +470,24 @@ For example, the 32-bit integer 11 has binary representation ~000000000000000000
 #+END_QUOTE
 
 #+BEGIN_SRC Java
-
+public int hammingWeight(int n)
 #+END_SRC
 
+不断右移，看最低位。
+
+*** Sum of Two Integers
+#+BEGIN_QUOTE
+Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.
+
+*Example:*
+Given a = 1 and b = 2, return 3.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public int getSum(int a, int b)
+#+END_SRC
+
+注意需要考虑负数，用无符号右移。原理就是数字电路中的补码加法器。
 
 ** Tree
 *** Construct String from Binary Tree
