@@ -22,6 +22,6 @@ public class SumOfTwoIntegers {
     }
 
     public static void main(String[] args) {
-        System.out.println(getSum(-12, -8));
+        System.out.println(getSum(-1, 1));
     }
 }

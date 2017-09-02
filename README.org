@@ -37,6 +37,10 @@
     - [[#maximum-depth-of-binary-tree][Maximum Depth of Binary Tree]]
     - [[#balanced-binary-tree][Balanced Binary Tree]]
     - [[#invert-binary-tree][Invert Binary Tree]]
+    - [[#two-sum-iv][Two Sum IV]]
+  - [[#array][Array]]
+    - [[#two-sum-i][Two Sum I]]
+    - [[#two-sum-ii][Two Sum II]]
 
 ** Linked List
 *** Linked List Cycle
@@ -487,7 +491,12 @@ Given a = 1 and b = 2, return 3.
 public int getSum(int a, int b)
 #+END_SRC
 
-注意需要考虑负数，用无符号右移。原理就是数字电路中的补码加法器。
+注意需要考虑负数，用无符号右移。原理就是数字电路中的补码加法器。对 =32= 位 =int= 而言，负数就需要对全部的 =32= 位进行运算，两个加数都是正数时，可能当高位全是 =0= 时就能够停止运算了。
+
+=Java= 的三种移位运算符：
+- ~>>~ 带符号右移，当左操作数是正数，则高位补 0，若左操作数为负数，则高位补 1；
+- ~<<~ 左移，低位补零；
+- ~>>~ 无符号右移，高位补零。
 
 ** Tree
 *** Construct String from Binary Tree
@@ -687,5 +696,78 @@ public TreeNode invertTree(TreeNode root)
 Recursive 的解法很直观，但是可以采用迭代的方式改写，使用 =Stack= 。
 
 iterative 的解法使用了一个 =Stack= ，讨论区中有人提出 =Recursive= 和 =Iterative= 都需要用到 =Stack= ，为何 =Iterative= 的更 =Scalable= ？原因在于 =application stack= 通常被限制，如 =JVM= 的默认仅 =1M= ，而用户 =Stack= 则可以很大，取决于机器内存。
+
+*** Two Sum IV
+#+BEGIN_QUOTE
+Given a Binary Search Tree and a target number, return true if there exist two elements in the BST such that their sum is equal to the given target.
+
+*Example 1:*
+: Input: 
+:     5
+:    / \
+:   3   6
+:  / \   \
+: 2   4   7
+: Target = 9
+: Output: True
+
+*Example 2:*
+: Input: 
+:     5
+:    / \
+:   3   6
+:  / \   \
+: 2   4   7
+: Target = 28
+: Output: False
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public boolean findTarget(TreeNode root, int k)
+#+END_SRC
+
+和 =Two Sum II= 类似，同样有三种做法，其中 =Two pointer= 法首先需要将 =binary tree= 转化为 =sorted array=. 
+
+** Array
+*** Two Sum I
+#+BEGIN_QUOTE
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+*Example:*
+: Given nums = [2, 7, 11, 15], target = 9,
+: Because nums[0] + nums[1] = 2 + 7 = 9,
+: return [0, 1].
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public int[] twoSum(int[] nums, int target)
+#+END_SRC
+
+=O(n)= 的解法都用到了 =HashMap= 。注意 =HashMap= 查找的复杂度是 =O(1)= 而不是 =O(log(n))= 。
+
+*** Two Sum II
+#+BEGIN_QUOTE
+Given an array of integers that is already sorted in ascending order, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+
+You may assume that each input would have exactly one solution and you may not use the same element twice.
+
+*Example:*
+: Input: numbers={2, 7, 11, 15}, target=9
+: Output: index1=1, index2=2
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public int[] twoSum(int[] numbers, int target)
+#+END_SRC
+
+三种做法：
+- 和 =Two Sum I= 相同的 =HashMap= 解法， =O(n)=
+- =Two pointers= 法， =O(n)=
+- =Binary Search= 法， =O(nlog(n))=
+
 
 
