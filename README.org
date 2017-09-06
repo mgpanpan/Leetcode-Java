@@ -748,6 +748,8 @@ Given a Binary Search Tree (BST), convert it to a Greater Tree such that every k
 public TreeNode convertBST(TreeNode root)
 #+END_SRC 
 
+使用 =reversed inorder traversal= ，先访问右子树再访问中间节点，最后访问左子树。
+
 ** Array
 *** Two Sum I
 #+BEGIN_QUOTE
