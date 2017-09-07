@@ -40,7 +40,7 @@
     - [[#two-sum-iv][Two Sum IV]]
     - [[#convert-bst-to-greater-tree][Convert BST to Greater Tree]]
     - [[#sum-of-left-leaves][Sum of Left Leaves]]
-  - [[#binary-tree-tilt][Binary Tree Tilt]]
+    - [[#binary-tree-tilt][Binary Tree Tilt]]
   - [[#array][Array]]
     - [[#two-sum-i][Two Sum I]]
     - [[#two-sum-ii][Two Sum II]]
@@ -781,7 +781,7 @@ For given node we check whether its left child is a leaf. If it is the case, we 
 - Iterative DFS (using stack)
 - Iterative BFS (using queue)
 
-** Binary Tree Tilt 
+*** Binary Tree Tilt 
 #+BEGIN_QUOTE
 Given a binary tree, return the tilt of the whole tree.
 
