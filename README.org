@@ -40,6 +40,7 @@
     - [[#two-sum-iv][Two Sum IV]]
     - [[#convert-bst-to-greater-tree][Convert BST to Greater Tree]]
     - [[#sum-of-left-leaves][Sum of Left Leaves]]
+  - [[#binary-tree-tilt][Binary Tree Tilt]]
   - [[#array][Array]]
     - [[#two-sum-i][Two Sum I]]
     - [[#two-sum-ii][Two Sum II]]
@@ -773,11 +774,42 @@ public int sumOfLeftLeaves(TreeNode root)
 For given node we check whether its left child is a leaf. If it is the case, we add its value to answer, otherwise recursively call method on left child. For right child we call method only if it has at least one nonnull child.
 #+END_QUOTE
 
-总结：
+*总结：*
+
 树的很多题目都可以用：
 - Recursive DFS
 - Iterative DFS (using stack)
 - Iterative BFS (using queue)
+
+** Binary Tree Tilt 
+#+BEGIN_QUOTE
+Given a binary tree, return the tilt of the whole tree.
+
+The tilt of a tree node is defined as the absolute difference between the sum of all left subtree node values and the sum of all right subtree node values. Null node has tilt 0.
+
+The tilt of the whole tree is defined as the sum of all nodes' tilt.
+
+*Example:*
+: Input: 
+:          1
+:        /   \
+:       2     3
+: Output: 1
+: Explanation:
+: Tilt of node 2 : 0
+: Tilt of node 3 : 0
+: Tilt of node 1 : |2-3| = 1
+: Tilt of binary tree : 0 + 0 + 1 = 1
+*Note:*
+1. The sum of node values in any subtree won't exceed the range of 32-bit integer.
+2. All the tilt values won't exceed the range of 32-bit integer.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public int findTilt(TreeNode root)
+#+END_SRC
+
+典型的后续遍历。使用了一个 =Global Variable= 。
 
 ** Array
 *** Two Sum I
