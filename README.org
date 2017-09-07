@@ -42,6 +42,7 @@
     - [[#sum-of-left-leaves][Sum of Left Leaves]]
     - [[#binary-tree-tilt][Binary Tree Tilt]]
     - [[#same-tree][Same Tree]]
+    - [[#diameter-of-binary-tree][Diameter of Binary Tree]]
   - [[#array][Array]]
     - [[#two-sum-i][Two Sum I]]
     - [[#two-sum-ii][Two Sum II]]
@@ -810,7 +811,7 @@ The tilt of the whole tree is defined as the sum of all nodes' tilt.
 public int findTilt(TreeNode root)
 #+END_SRC
 
-典型的后续遍历。使用了一个 =Global Variable= 。
+典型的后续遍历。使用了一个 =Global Variable= 。若要省去这个全局变量，可以返回一个元组，元组中一个元素记录了当前所有访问的节点的 =tilt value= ，另一个元素记录了当前的 =sum= 。
 
 *** Same Tree
 #+BEGIN_QUOTE
@@ -822,6 +823,35 @@ Two binary trees are considered equal if they are structurally identical and the
 #+BEGIN_SRC Java
 public boolean isSameTree(TreeNode p, TreeNode q)
 #+END_SRC
+
+递归，当前 =value= 相等且左子树和右子树为 =Same Tree= 。
+
+*** Diameter of Binary Tree
+#+BEGIN_QUOTE
+Given a binary tree, you need to compute the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+*Example:*
+Given a binary tree 
+:           1
+:          / \
+:         2   3
+:        / \     
+:       4   5    
+Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].
+
+*Note:* The length of path between two nodes is represented by the number of edges between them.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public int diameterOfBinaryTree(TreeNode root)
+#+END_SRC
+
+*思路：* 
+
+For every node, length of longest path which pass it = MaxDepth of its left subtree + MaxDepth of its right subtree.
+
+本质上也是使用 =post order traversal= ，和 =binary tree tilt= 类似。
+
 
 ** Array
 *** Two Sum I
