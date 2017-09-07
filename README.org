@@ -41,6 +41,7 @@
     - [[#convert-bst-to-greater-tree][Convert BST to Greater Tree]]
     - [[#sum-of-left-leaves][Sum of Left Leaves]]
     - [[#binary-tree-tilt][Binary Tree Tilt]]
+    - [[#same-tree][Same Tree]]
   - [[#array][Array]]
     - [[#two-sum-i][Two Sum I]]
     - [[#two-sum-ii][Two Sum II]]
@@ -810,6 +811,17 @@ public int findTilt(TreeNode root)
 #+END_SRC
 
 典型的后续遍历。使用了一个 =Global Variable= 。
+
+*** Same Tree
+#+BEGIN_QUOTE
+Given two binary trees, write a function to check if they are equal or not.
+
+Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public boolean isSameTree(TreeNode p, TreeNode q)
+#+END_SRC
 
 ** Array
 *** Two Sum I
