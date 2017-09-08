@@ -43,6 +43,7 @@
     - [[#binary-tree-tilt][Binary Tree Tilt]]
     - [[#same-tree][Same Tree]]
     - [[#diameter-of-binary-tree][Diameter of Binary Tree]]
+    - [[#convert-sorted-array-to-binary-search-tree][Convert Sorted Array to Binary Search Tree]]
   - [[#array][Array]]
     - [[#two-sum-i][Two Sum I]]
     - [[#two-sum-ii][Two Sum II]]
@@ -852,6 +853,18 @@ For every node, length of longest path which pass it = MaxDepth of its left subt
 
 本质上也是使用 =post order traversal= ，和 =binary tree tilt= 类似。
 
+*** Convert Sorted Array to Binary Search Tree
+#+BEGIN_QUOTE
+Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
+#+END_QUOTE
+
+#+BEGIN_SRC Java
+public TreeNode sortedArrayToBST(int[] nums)
+#+END_SRC
+
+参考 =Converted Sorted Linked List to BST= ，
+- 解决思路一：自顶而下 Recursive；
+- 解决思路二：自底而上，使用一个 =member variable= 。
 
 ** Array
 *** Two Sum I
